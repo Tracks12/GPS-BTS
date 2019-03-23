@@ -1,0 +1,406 @@
+/**
+ * Author     : CARDINAL Florian
+ * File       : style.css
+ * Last Modif : 11/03/2019
+ * Location   : css/
+ */
+
+* {
+	font-family: Ubuntu, sans-serif;
+	margin: 0; padding: 0;
+}
+
+html {
+	background: url('../img/bg.png') center fixed no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 0;
+	width: 100%;
+}
+
+#popup {
+	background: rgba(238, 238, 238, .8);
+	display: none;
+	height: 100%;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+#popupClose {
+	color: rgb(51, 51, 51);
+	cursor: pointer;
+	font-size: 58px;
+	height: 1em;
+	padding: .25em;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	transition: .4s all;
+	width: 1em;
+}
+#popupClose:hover {
+	color: rgb(200, 0, 0);
+	transform: rotateZ(90deg);
+}
+
+#canvasLoader {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.login {
+	color: rgb(51, 51, 51);
+	left: 50%;
+	padding: 2em;
+	position: relative;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 15em;
+}
+.login::before,
+.login::after {
+	border: 6px solid currentColor;
+	bottom: 0;
+	color: rgb(200, 0, 0);
+	content: '';
+	height: auto;
+	position: absolute;
+	top: 0;
+	width: 2em;
+}
+.login::before {
+	border-right: none;
+	left: -2em;
+}
+.login::after {
+	border-left: none;
+	right: -2em;
+}
+
+.login h2 {
+	border-bottom: 4px solid rgb(200, 0, 0);
+	display: inline-block;
+	font-size: 34px;
+	font-weight: 100;
+	margin-bottom: 1.75em;
+	padding-bottom: .75em;
+	text-transform: capitalize;
+}
+
+.login form i {
+	position: absolute;
+	font-size: 24px;
+}
+
+.login form input {
+	color: rgb(51, 51, 51);
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 100;
+}
+
+.login form input[type='password'],
+.login form input[type='text'] {
+	background: transparent;
+	border: 0;
+	border-bottom: 2px solid currentColor;
+	display: block;
+	margin: 0 0 1em 32px;
+	padding-bottom: 10px;
+	width: 10.25em;
+}
+.login form input::placeholder {
+	color: currentColor;
+	text-transform: capitalize;
+}
+
+.login form .error {
+	color: rgb(200, 0, 0);
+	display: none;
+	font-size: 20px;
+	font-weight: 500;
+	margin: -10px 0 0 -1.625em;
+	position: absolute;
+	text-align: center;
+	text-transform: capitalize;
+	width: 100%;
+}
+
+.login form input[type='submit'] {
+	background: transparent;
+	border: 2px solid rgb(51, 51, 51);
+	box-sizing: border-box;
+	cursor: pointer;
+	display: block;
+	font-weight: 500;
+	margin-top: 2em;
+	padding: .5em 0;
+	position: relative;
+	text-transform: capitalize;
+	transition: .4s all;
+	width: 100%;
+}
+.login form input[type='submit']:hover {
+	background: rgb(51, 51, 51);
+	box-shadow: 0 0 15px rgb(51, 51, 51);
+	color: rgb(238, 238, 238);
+}
+.login form input[type='submit']:disabled { opacity: .5; }
+
+#particlesJs {
+	background: rgba(238, 238, 238, .75);
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: -1;
+}
+
+nav {
+	background: rgb(0, 0, 0, .75);
+	box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	width: 14em;
+}
+
+nav ul .item { overflow: hidden; }
+
+nav ul a {
+	color: rgb(238, 238, 238);
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+nav ul .item .btn,
+nav ul .item .btn::before {
+	background: rgb(50, 50, 50);
+	font-size: 22px;
+	padding: 16px 20px;
+	position: relative;
+	transition: .2s all;
+}
+nav ul .item .btn::before {
+	bottom: -7px;
+	content: '';
+	height: 14px;
+	left: 50%;
+	padding: 0;
+	position: absolute;
+	transform: translateX(-50%)rotate(45deg);
+	width: 14px;
+}
+nav ul .item .btn:hover,
+nav ul .item .btn:hover:before { background: rgb(60, 60, 60); }
+
+nav ul .item span {
+	margin-right: 10px;
+	text-align: center;
+	width: 1em;
+}
+
+nav ul .item ul {
+	background: rgba(0, 0, 0, .3);
+	overflow: hidden;
+}
+
+nav ul .item ul a {
+	font-size: 18px;
+	padding: 16px 30px;
+	position: relative;
+	transition: .3s all;
+}
+nav ul .item ul a:hover { text-shadow: 0 0 8px currentColor; }
+nav ul .item ul a::before,
+nav ul .item ul a::after {
+	background: currentColor;
+	box-shadow: 1px 0 5px currentColor;
+	bottom: 3px;
+	content: '';
+	height: auto;
+	left: 0;
+	position: absolute;
+	top: 3px;
+	transition: .2s all;
+	width: 0;
+}
+nav ul .item ul a:hover:before { width: 4px; }
+nav ul .item ul a::after {
+	background: rgba(238, 238, 238, .2);
+	box-shadow: none;
+	z-index: -1;
+}
+nav ul .item ul a:hover:after { width: 100%; }
+
+section {
+	bottom: 0;
+	height: 0;
+	left: 0;
+	margin-left: 14em;
+	overflow: inherit;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+header {
+	background: rgba(0, 0, 0, .75);
+	color: rgb(238, 238, 238);
+	left: 14em;
+	padding: 15px 0 15px 20px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: auto;
+}
+
+header #time {
+	font-size: 22px;
+	font-weight: lighter;
+	position: absolute;
+	right: 20px;
+	top: 1em;
+}
+
+header h1 {
+	font-size: 38px;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+aside {
+	background: rgba(238, 238, 238, .75);
+	box-sizing: border-box;
+	color: rgb(51, 51, 51);
+	display: block;
+	left: 0;
+	margin: 0 1em 1em 1em;
+	padding: 1.5em;
+	position: relative;
+	right: 0;
+	top: 5.75em;
+	width: auto;
+	z-index: -1;
+}
+aside::before, aside::after {
+	border: 8px solid currentColor;
+	color: rgb(200, 0, 0);
+	content: '';
+	height: 1.5em;
+	position: absolute;
+	width: 1.5em;
+}
+aside::before {
+	border-bottom: none;
+	border-right: none;
+	left: 0;
+	margin: -4px 0 0 -4px;
+	top: 0;
+}
+aside::after {
+	border-left: none;
+	border-top: none;
+	bottom: 0;
+	margin: 0 -4px -4px 0;
+	right: 0;
+}
+.first { top: 5.75em; }
+.last { margin-bottom: 6.75em; }
+
+aside h2 {
+	border-bottom: 3px solid rgb(200, 0, 0);
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 1.75em;
+	padding-bottom: .5em;
+	text-transform: capitalize;
+}
+
+aside h3 {
+	font-weight: 500;  
+	text-transform: capitalize;
+}
+
+aside a {
+	border: 2px solid rgb(51, 51, 51);
+	color: currentColor;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	margin: 1em .75em 1em 0;
+	padding: .75em 1.25em;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .3s all;
+}
+aside a:hover {
+	background: rgb(51, 51, 51);
+	color: rgb(238, 238, 238);
+}
+
+aside a span { width: 1em; }
+
+aside iframe {
+	border: 2px solid currentColor;
+	display: block;
+	min-height: 500px;
+	width: 100%;
+}
+
+table {
+	font-size: 18px;
+	position: relative;
+}
+table tr th {
+	border-bottom: 2px solid rgb(200, 0, 0);
+	font-weight: 500;
+	padding: 0 .75em .75em 0;
+	text-align: left;
+	text-transform: capitalize;
+}
+table tr td { padding: .25em .75em 0 0; }
+
+footer {
+	border-top: 1px solid rgb(136, 136, 136);
+	bottom: 0;
+	box-sizing: border-box;
+	left: 0;
+	margin: 0 1em;
+	padding: 1.25em 0em .75em 0em;
+	position: fixed;
+	right: 0;
+	width: 12em;
+}
+
+footer a {
+	color: rgb(150, 150, 150);
+	display: block;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+footer font {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/**
+ * END
+ */
