@@ -45,6 +45,7 @@
 		}
 	}
 	else if(isset($_SESSION["user"])) {
+		if(!isset($_GET["link"])) { $_GET["link"] = NULL; }
 		switch(isInput($_GET["link"])) {
 			case "map": echo("<h2>affichage carte</h2>
 					<iframe src=\"http://umap.openstreetmap.fr/fr/map/anonymous-edit/302704:mlSUlk4wjHznxzvYWFsvJuuaH10\"></iframe>");
