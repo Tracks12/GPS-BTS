@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `position` (
   `longitude` float NOT NULL COMMENT '[deg, min, s]',
   `latOrient` varchar(16) NOT NULL COMMENT '[1, 2]',
   `longOrient` varchar(16) NOT NULL COMMENT '[1, 2]'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='[id, time, [deg, min, sec], [deg, min, sec], [N, S], [E, O]]';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='[id, time, [deg], [deg], [N, S], [E, O]]';
 
 INSERT INTO `position` (`id`, `datehe`, `latitude`, `longitude`, `latOrient`, `longOrient`) VALUES
 	(1, 1552470439, 43.58, 1.42, '1', '1'),
