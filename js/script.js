@@ -9,8 +9,8 @@ class anim {
 	static startTime(sep) {
 		var today = new Date(), delay = 500;
 		var h = today.getHours(), m = today.getMinutes(), s;
-		if(h < 10) { h = '0'+h; }
-		if(m < 10) { m = '0'+m; }
+		if(h < 10) { h = `0${h}`; }
+		if(m < 10) { m = `0${m}`; }
 		if(!(document.body.clientWidth < 720)) {
 			var sep = ":"; s = today.getSeconds();
 			if(s < 10) { s = '0'+s; }
