@@ -20,7 +20,7 @@
 		private static $dbName = 'sigGPS';
 		private static $encoding = 'utf8';
 		private static $username = 'root';
-		private static $password = 'toor';
+		private static $password = 'azerty';
 	}
 	
 	$bdd = dataBase::connect();
