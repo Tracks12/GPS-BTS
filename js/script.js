@@ -13,8 +13,8 @@ class anim {
 		if(m < 10) { m = `0${m}`; }
 		if(!(document.body.clientWidth < 720)) {
 			var sep = ":"; s = today.getSeconds();
-			if(s < 10) { s = '0'+s; }
-			s = ":"+s;
+			if(s < 10) { s = `0${s}`; }
+			s = `:${s}`;
 		} else { s = ''; delay = 1000; if(sep === ":") { sep = " "; } else { sep = ":"; }}
 		$('#time').html(h+sep+m+s);
 		setTimeout(function() { anim.startTime(sep); }, delay);
