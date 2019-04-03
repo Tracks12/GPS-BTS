@@ -6,7 +6,7 @@
 	Location   : /
 -->
 <?php
-	require("./php/bdd_access.php");
+	require("./php/bddAccess.php");
 	
 	if(isset($_GET["logout"])) {
 		unset($_SESSION["user"]);
