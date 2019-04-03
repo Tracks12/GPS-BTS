@@ -6,7 +6,7 @@
 	 * Location : /php/
 	 */
 	
-	require("./bdd_access.php");
+	require("./bddAccess.php");
 	parse_str($_SERVER["QUERY_STRING"]);
 	date_default_timezone_set("Europe/Paris");
 	
