@@ -6,7 +6,7 @@
 	 * Location   : /php/
 	 */
 	
-	require("./bdd_access.php");
+	require("./bddAccess.php");
 	
 	function isInput($data) {
 		$data = trim($data);
